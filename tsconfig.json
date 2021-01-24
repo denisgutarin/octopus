@@ -10,6 +10,9 @@
     "experimentalDecorators": false,
     "emitDecoratorMetadata": false,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@octopus/*": ["./*/src"]
+    }
   }
 }

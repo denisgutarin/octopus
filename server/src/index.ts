@@ -1,1 +1,3 @@
-console.log('server');
+import hello from '@octopus/common';
+
+hello();

@@ -11,5 +11,14 @@
     "common",
     "server",
     "webapp"
-  ]
+  ],
+  "scripts": {
+    "webapp": "yarn workspace @octopus/webapp start",
+    "server": "yarn workspace @octopus/server start",
+    "common": "yarn workspace @octopus/common start",
+    "start": "concurrently --kill-others-on-fail \"yarn common\"  \"yarn server\" \"yarn webapp\""
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
 }
