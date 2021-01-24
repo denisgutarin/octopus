@@ -1,0 +1,15 @@
+{
+  "name": "octopus",
+  "version": "1.0.0",
+  "description": "yet another CRM",
+  "main": "index.js",
+  "repository": "https://github.com/denisgutarin/octopus.git",
+  "author": "Denis Gutarin <denis.gutarin@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "common",
+    "server",
+    "webapp"
+  ]
+}
