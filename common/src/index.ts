@@ -1,3 +1,3 @@
-export default function hello() {
+export default function hello(): void {
   console.log('hello');
 }
