@@ -1,3 +1,20 @@
-import hello from '@octopus/common';
+import path from 'path';
+import autoLoad from 'fastify-autoload';
+import fastify from 'fastify';
 
-hello();
+const app = fastify({ logger: true });
+
+app.register(autoLoad, {
+  dir: path.join(__dirname, 'routes'),
+  dirNameRoutePrefix: true,
+});
+
+const start = async () => {
+  try {
+    await app.listen(3000);
+  } catch (err) {
+    app.log.error(err);
+    process.exit(1);
+  }
+};
+start();
