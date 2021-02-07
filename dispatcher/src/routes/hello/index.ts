@@ -2,7 +2,7 @@ import { FastifyPluginCallback } from 'fastify';
 
 const route: FastifyPluginCallback = (app, opts, done) => {
   app.get('/', async () => {
-    return { hello: 'world' };
+    return { hello: 'world!' };
   });
   done();
 };

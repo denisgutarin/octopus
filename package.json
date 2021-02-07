@@ -8,15 +8,15 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "common",
-    "server",
-    "webapp"
+    "core",
+    "dispatcher",
+    "gui"
   ],
   "scripts": {
-    "webapp": "yarn workspace @octopus/webapp start",
-    "server": "yarn workspace @octopus/server start",
-    "common": "yarn workspace @octopus/common start",
-    "start": "concurrently --kill-others-on-fail \"yarn common\"  \"yarn server\" \"yarn webapp\""
+    "gui": "yarn workspace @octopus/gui start",
+    "dispatcher": "yarn workspace @octopus/dispatcher start",
+    "core": "yarn workspace @octopus/core start",
+    "start": "concurrently --kill-others-on-fail \"yarn core\"  \"yarn dispatcher\" \"yarn gui\""
   },
   "devDependencies": {
     "concurrently": "^5.3.0"
