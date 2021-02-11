@@ -1,4 +1,9 @@
-// ARIA
+// SEMANTIC HTML + CSS-GRIDS + REACT, REACT-QUERY
 // CQRS
+// - event message: object, id, timestamp, event, arguments, stateDIff
+// - reducers to calculate stateDIff
+// - event collection db
+// - state collections db
+// MONGO
+// AGGREGATORS SERVICES (throgh watchers)
 // KUBERNATES
-// CSS-GRIDS
