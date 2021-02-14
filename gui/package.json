@@ -4,9 +4,9 @@
   "license": "MIT",
   "private": "true",
   "scripts": {
-    "start": "webpack serve --open",
+    "start": "webpack serve --open --config webpack.config.dev.js",
     "test": "jest",
-    "build": "webpack"
+    "build": "webpack --config webpack.config.prod.js"
   },
   "dependencies": {
     "@octopus/core": "*",
