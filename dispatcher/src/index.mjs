@@ -1,11 +1,15 @@
-import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 import autoLoad from 'fastify-autoload';
 import fastify from 'fastify';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = fastify({ logger: true });
 
 app.register(autoLoad, {
-  dir: path.join(__dirname, 'routes'),
+  dir: join(__dirname, 'routes'),
   dirNameRoutePrefix: true,
 });
 

@@ -16,7 +16,7 @@
     "gui": "yarn workspace @octopus/gui start",
     "dispatcher": "yarn workspace @octopus/dispatcher start",
     "core": "yarn workspace @octopus/core start",
-    "start": "concurrently --kill-others-on-fail \"yarn core\"  \"yarn dispatcher\" \"yarn gui\""
+    "start": "concurrently --kill-others-on-fail \"yarn dispatcher\" \"yarn gui\""
   },
   "devDependencies": {
     "concurrently": "^5.3.0"
