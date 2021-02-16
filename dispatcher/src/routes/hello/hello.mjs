@@ -1,3 +1,5 @@
+'use-strict';
+
 /**
  * Hello route
  * @param {import("fastify").FastifyInstance} app
