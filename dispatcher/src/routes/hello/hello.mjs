@@ -3,10 +3,9 @@
 /**
  * Hello route
  * @param {import("fastify").FastifyInstance} app
- * @param opts
- * @param done
+ * @param {() => void} done
  */
-const route = (app, opts, done) => {
+const route = (app, _, done) => {
   app.get('/', async () => {
     return { hello: 'world!' };
   });
