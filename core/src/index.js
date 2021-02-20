@@ -1,3 +1,5 @@
-export default function hello() {
-  console.log('hello');
+'use strict';
+
+export default function hello({ name }) {
+  console.log(`hello ${name}`);
 }

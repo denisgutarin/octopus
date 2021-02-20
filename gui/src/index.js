@@ -1,4 +1,4 @@
-'use-strict';
+'use sctrict';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
