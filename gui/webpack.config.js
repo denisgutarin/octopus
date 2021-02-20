@@ -3,9 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.ts',
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.ts', '.tsx', '.jsx', '.js'],
   },
   output: {
     filename: '[name].bundle.js',
@@ -14,9 +14,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(?:js|jsx)$/i,
+        test: /\.(?:ts|tsx)$/i,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: ['ts-loader'],
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,

@@ -13,10 +13,10 @@
     "gui"
   ],
   "scripts": {
-    "gui": "yarn workspace @octopus/gui start",
-    "dispatcher": "yarn workspace @octopus/dispatcher start",
-    "core": "yarn workspace @octopus/core start",
-    "start": "concurrently --kill-others-on-fail \"yarn dispatcher\" \"yarn gui\""
+    "gui": "yarn workspace @octopus/gui dev",
+    "dispatcher": "yarn workspace @octopus/dispatcher dev",
+    "core": "yarn workspace @octopus/core dev",
+    "dev": "concurrently --kill-others-on-fail \"yarn dispatcher\" \"yarn gui\""
   },
   "devDependencies": {
     "concurrently": "^5.3.0"

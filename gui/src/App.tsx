@@ -1,9 +1,11 @@
-'use sctrict';
-
 import React from 'react';
 import Proptype from 'prop-types';
 
-const App = (props) => {
+type Props = {
+  name?: string;
+};
+
+const App = (props: Props) => {
   return <h1>Application {props.name}</h1>;
 };
 App.propTypes = {
