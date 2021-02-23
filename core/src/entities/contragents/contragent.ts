@@ -23,7 +23,6 @@ export type ContragentData = {
   name?: string;
   taxPayerId?: string;
   taxPayerReasonCode?: string;
-  kpp?: string;
   type?: ContragentSubType;
 };
 
