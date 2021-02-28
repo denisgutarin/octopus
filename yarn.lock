@@ -2205,6 +2205,11 @@ entities@^2.0.0:
   resolved "https://registry.yarnpkg.com/entities/-/entities-2.2.0.tgz#098dc90ebb83d8dffa089d55256b351d34c4da55"
   integrity sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==
 
+entity-constructor@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/entity-constructor/-/entity-constructor-0.0.1.tgz#05edd84f77c4a790e13c2396709126e7f9912b67"
+  integrity sha512-5OYVozhYx61tCETnfIz23QwwyCJrQre1cfN6JvlvrN7KC1FlP1oRujfQVy8wwgvOnE6FzsLX731NVWs7KBQzng==
+
 envinfo@^7.7.3:
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-7.7.4.tgz#c6311cdd38a0e86808c1c9343f667e4267c4a320"

@@ -1,5 +1,6 @@
 import { v4 as guid } from 'uuid';
-
+import { createConstructor } from 'entity-constructor';
+import { Template } from 'entity-constructor/dist/entity-constructor';
 export type ContragentType = 'PERSON' | 'INCORPORATION';
 export type ContragentSubType =
   | 'PERSON'
@@ -17,7 +18,7 @@ export const ContragentTypeForSubtype: {
   STATE_ORGANIZATION: 'INCORPORATION',
 };
 
-export type ContragentData = {
+type ContragentData = {
   id: string;
   createdDate: Date;
   name?: string;
@@ -26,23 +27,26 @@ export type ContragentData = {
   type?: ContragentSubType;
 };
 
-const initialCustomer = {
-  id: guid(),
-  createdDate: new Date(),
+const template: Template<ContragentData> = {
+  id: {
+    defaultValue: guid(),
+  },
+  createdDate: {
+    defaultValue: new Date(),
+  },
+  taxPayerId: {
+    defaultValue: '',
+  },
+  taxPayerReasonCode: {
+    defaultValue: '',
+  },
+  name: {
+    defaultValue: '',
+  },
+  type: {
+    defaultValue: 'PERSON',
+  },
 };
 
-export const Contragent = (data: ContragentData = initialCustomer) => {
-  const withName = (name: string) => Contragent({ ...data, name });
-  const withTaxPayerId = (id: string) =>
-    Contragent({ ...data, taxPayerId: id });
-  const withTaxReasonCode = (code: string) =>
-    Contragent({ ...data, taxPayerReasonCode: code });
-  return Object.freeze({
-    ...data,
-    withName,
-    withTaxPayerId,
-    withTaxReasonCode,
-  });
-};
-
-export type Contragent = ReturnType<typeof Contragent>;
+export const newContragent = createConstructor(template);
+export type Contragent = ReturnType<typeof newContragent>;
